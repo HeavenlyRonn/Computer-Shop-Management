@@ -11,12 +11,11 @@ import java.awt.GridBagLayout;
 import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.Font;
-import ui.AdminScreen;
-import ui.UserScreen;
 import database.UserDAO;
 
 // Unified login screen for the Computer Shop Management System.
 // Admin credentials are checked against the database, PC logins are checked in code.
+@SuppressWarnings("serial")
 public class LoginScreen extends JFrame {
 
     private JTextField usernameField;

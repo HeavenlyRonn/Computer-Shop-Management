@@ -23,6 +23,7 @@ import javax.swing.Timer;
 
 // Admin dashboard showing every PC tile with live countdowns and timer controls.
 // The Notify button flags a PC row so that PC's UserScreen shows a counter popup on its next 1-second poll.
+@SuppressWarnings("serial")
 public class AdminScreen extends JFrame {
 
     private static final Color WINDOW_BACKGROUND = new Color(240, 240, 240);

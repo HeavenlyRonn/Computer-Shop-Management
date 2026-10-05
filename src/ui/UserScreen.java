@@ -14,7 +14,6 @@ import java.awt.TrayIcon;
 import java.awt.event.MouseAdapter;
 import java.awt.event.WindowAdapter;
 import java.awt.image.BufferedImage;
-import java.math.BigDecimal;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import javax.swing.BorderFactory;
@@ -31,11 +30,11 @@ import javax.swing.Timer;
 
 // Customer countdown timer with translucent popups and system tray behavior.
 // Preview button is for demo purposes only and would be hidden in production.
+@SuppressWarnings("serial")
 public class UserScreen extends JFrame {
 
     private String pcNumber;
     private int pcId;
-    private BigDecimal hourlyRate;
 
     private JLabel timerLabel;
     private JLabel hintLabel;
@@ -70,7 +69,6 @@ public class UserScreen extends JFrame {
                 return;
             }
             pcId = (Integer) pcRow[0];
-            hourlyRate = (BigDecimal) pcRow[2];
         } catch (SQLException sqlException) {
             // Print the failure and close, the timer cannot run without the row.
             sqlException.printStackTrace();
